@@ -1,17 +1,3 @@
-# ESP32 library for cheap 74hc595 based 8-digit 7-segment displays
-
-![74hc595 based display](74hc595-display.png)
-
-Haven't found much information about these. Some Blog-posts, but not as library. 
-And the libraries, I've found were not capable of driving multiple displays.
-Therefore...
-
-## Usage
-
-Include this library into your IDE (Arduino via library-manager, platformio via `lib_deps`) by pointing to this repository.
-The library uses i2s parallel transfers (aka LCD-mode) to ensure flicker-free display and lowest CPU-usage.
-
-```cpp
 #include <Arduino.h>
 
 #include <Display8DigitsI2S_74595.h>
@@ -75,4 +61,3 @@ void loop()
         }
     }
 }
-```
