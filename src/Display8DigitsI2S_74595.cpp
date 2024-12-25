@@ -165,7 +165,7 @@ void Display8DigitsI2S_74595::i2s_init()
 
     for (uint8_t digit = 0; digit < NDIGITS; digit++) {
         // every other frame contains the shift clock (sclk)
-        for (uint8_t i = 1; i < FRAMES_PER_DIGIT - 1; i += 2) {
+        for (uint8_t i = 0; i < FRAMES_PER_DIGIT - 1; i += 2) {
             i2s_dma_buffer[offset + i] |= 0x200;
         }
         // lastframe contains the output latch (rclk)
